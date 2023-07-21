@@ -1,5 +1,374 @@
+@font-face {
+  font-family: 'Century Expanded';
+  src: url('assets/fonts/CenturyExp-Reg.otf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Century Expanded';
+  src: url('assets/fonts/CenturyExp-RegIta.otf');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Clearface';
+  src: url('assets/fonts/ClearfaceITCPro-Heavy.otf');
+}
+@font-face {
+  font-family: 'Frutiger';
+  src: url('assets/fonts/Frutiger_Roman.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frutiger';
+  src: url('assets/fonts/Frutiger_Italic.ttf');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Frutiger Condensed';
+  src: url('assets/fonts/Frutiger_Condensed.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frutiger Condensed Bold';
+  src: url('assets/fonts/Frutiger_Bold_Condensed.ttf');
+  font-style: normal;
+  font-weight: bold;
+}
 .App {
   text-align: center;
+  background-image: url('assets/images/MBE_AA_bkgd.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Century Expanded', sans-serif;
+  color: #2a1c14;
+  font-size: 22px;
+}
+
+.Container {
+  padding: 50px 50px 50px 100px;
+  display: flex;
+  flex-direction: row;
+}
+.ButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.Title {
+  font-size: 60px;
+  color: #5d3653;
+  font-family: 'Clearface', serif;
+}
+.SplashTitle {
+  font-size: 80px;
+  color: white;
+  font-family: 'Clearface', serif;
+  text-shadow: 1px 2px 4px #2a1c14;
+}
+
+.btn {
+  border-radius: 0;
+  font-family: "Frutiger Condensed Bold", sans-serif;
+  font-size: 26px;
+  background-color: #d59132;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+.btn:hover, .btn.active {
+  background-color: #5d3653;
+  color: white;
+}
+
+.SplashButton {
+  width: 250px;
+  animation: fadeIn 2s ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.CategoryButtons .btn {
+  border-radius: 0;
+  font-family: "Frutiger Condensed Bold", sans-serif;
+  font-size: 26px;
+  background-color: white;
+  color: #d59132;
+  border: 2px solid white;
+  width: 420px;
+  margin: 0 4px;
+  padding: 10px 0;
+
+}
+.CategoryButtons .btn.active {
+  background-color: #30647e;
+  color: white;
+  border: 2px solid #d59132;
+}
+
+.ChapterGuide {
+  width: 550px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  height: 900px;
+  position: relative;
+}
+
+.ChapterList {
+  position: relative;
+  margin-left: 50px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 400px;
+}
+.ChapterItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 65px;
+}
+.ChapterItem button {
+  width: 240px;
+}
+.ChapterLine {
+  height: 2px;
+  width: 100px;
+  background-color: #d59132;
+}
+.ChapterLine:before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: #d59132 solid 2px;
+  display: block;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+
+.ChapterNavigation {
+  align-self: center;
+  margin-left: 30px;
+  margin-top: 150px;
+}
+.NextLink, .PrevLink {
+  margin: 40px 0;
+  display: block;
+}
+.PrevLink img {
+  rotate: 180deg;
+}
+
+.WorkerList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.WorkerList .WorkerItem {
+  margin: 20px;
+}
+.WorkerList .WorkerLink {
+  color: white;
+  text-decoration: none;
+}
+.WorkerList .WorkerNameTag {
+  color: white;
+  font-size: 22px;
+  font-family: "Frutiger Condensed Bold", sans-serif;
+  padding: 10px 0;
+  background-color: #d59132;
+  width: 230px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: -30px;
+  position: relative;
+}
+
+.Intro {
+  font-size: 22px;
+  width: 860px;
+  margin: 10px auto 10px auto;
+}
+
+.HomeLink {
+  font-size: 22px;
+  color: #2a1c14;
+  text-decoration: none;
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  font-family: "Frutiger Condensed Bold", sans-serif;
+
+}
+.HomeLink span {
+  color: white;
+  padding: 5px 6px 5px 4px;
+  border-radius: 50%;
+  background-color: #d59132;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.WorkerName {
+  font-size: 40px;
+  color: #30647e;
+  font-family: 'Clearface', serif;
+  padding-left: 10px;
+}
+
+.WorkerName:before {
+  content: ' ';
+  border-left: 4px solid #30647e;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.Category {
+  font-size: 32px;
+  font-style: italic;
+}
+
+.Button {
+  background: white;
+  color: #d59132;
+  border: 2px solid white;
+  border-radius: 0;
+  padding: 10px 20px;
+  font-size: 27px;
+  font-family: 'Frutiger Condensed Bold', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 4px;
+  width: 420px;
+}
+
+.Button.Active {
+  background: #30647e;
+  color: white;
+  border: 2px solid #d59132;
+}
+
+.BioContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  margin-top: 120px;
+  align-items: center;
+}
+
+.BioNav {
+  font-family: "Frutiger Condensed Bold", sans-serif;
+  font-size: 22px;
+  color: #2a1c14;
+  width: 100px;
+  text-align: center;
+  margin: 0 75px
+}
+
+.BioNav a {
+  color: #2a1c14;
+  text-decoration: none;
+}
+
+.BioNav a:before {
+  content: '';
+  background-image: url("assets/images/MBE_arrow_prev.png");
+  background-size: contain;
+  height: 25px;
+  width: 94px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.BioNav .Next a:before {
+  background-image: url("assets/images/MBE_arrow_next.png");
+}
+
+.Card {
+  background-image: url('assets/images/MBE_AA_card.png');
+  width: 1200px;
+  height: 720px;
+  background-size: 100%;
+}
+.CardContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  text-align: left;
+  align-items: center;
+  animation: fadeIn 1s;
+}
+.CardContent {
+  flex: 1 0 750px;
+  padding-right: 50px;
+}
+.CardTitle {
+  font-size: 30px;
+  color: #5d3653;
+  font-family: 'Clearface', serif;
+  margin-bottom: 10px;
+}
+
+.CardBody {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CardBody {
+  height: 550px;
+  position: relative;
+}
+
+.CardPortrait {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-left: 25px;
+  position: absolute;
+  bottom: 0;
+}
+.Portrait {
+  padding: 0 45px 20px 5px;
+}
+.Portrait img {
+  height: 180px;
+}
+.Quote {
+
+}
+.QuoteContent {
+  font-style: italic;
+}
+.QuoteAuthor {
+  color: #5d3653;
+  font-family: 'Clearface', serif;
+  float: right;
+  font-style: italic;
+}
+.Popups {
+  flex: 1 0;
+}
+.Popups img {
+  width: 302px;
+  height: 262px;
+  border: 1px solid #2a1c14;
+  object-fit: cover;
+}
+.Popups img:last-child {
+  margin-right: 0;
 }
 
 .App-logo {
@@ -22,10 +391,133 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Century Expanded', sans-serif;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.modal {
+  font-family: 'Century Expanded', sans-serif;
+  color: #2a1c14;
+}
+.modal-dialog {
+  max-width: 1200px;
+}
+.modal-content {
+  border-radius: 0;
+  background: url('assets/images/MBE_popup-bkgd.png');
+  background-size: cover;
+  padding: 20px;
+}
+.modal-header {
+  border: none;
+  height: 75px;
+  padding: 0 20px;
+}
+.modal-header .btn-close {
+  color: #d59132;
+  background: url("assets/images/MBE_close.png") no-repeat;
+  background-size: contain;
+  opacity: 1;
+}
+.modal-body {
+  padding: 0 100px 50px 100px;
+  font-size: 22px;
+  text-align: center;
+}
+.modal-body img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 1px solid #2a1c14
+
+}
+.modal-body .Caption {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.modal-body .Copyright {
+  font-size: 16px;
+  display: block;
+  margin-top: 10px;
+}
+.slideshow img {
+  transform: scale(1.2);
+}
+.slideshow img.active {
+  animation: growIn 6s ease-in-out;
+}
+
+.acorn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  background-color: #30647e;
+  border-radius: 50%;
+  z-index: 1;
+}
+.acorn.active {
+  background-color: #d59132;
+  box-shadow: white 0 0 10px;
+}
+
+.acorn-popup {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background: #5d3653;
+  font-family: 'Century Expanded', sans-serif;
+  color: white;
+  font-size: 22px;
+  width: 380px;
+  height: 250px;
+  padding: 40px;
+  display: none;
+  text-align: left;
+}
+.acorn-popup.active {
+  display: flex;
+}
+.acorn-popup .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: url("assets/images/MBE_close.png") no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.tooltip {
+  background: #30647e;
+  font-family: 'Century Expanded', sans-serif;
+  font-size: 16px;
+  border-radius: 0;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+.TrainRoute {
+  width: 373px;
+  height: 900px;
+  position: absolute;
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +526,23 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes growIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
