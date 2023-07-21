@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mbeaa/static/css/main.04ba3534.css",
-    "main.js": "/mbeaa/static/js/main.b9a834ac.js",
+    "main.js": "/mbeaa/static/js/main.57e69ff6.js",
     "static/media/MBE_popup-bkgd.png": "/mbeaa/static/media/MBE_popup-bkgd.803549eae193ec0abb19.png",
     "static/media/MBE_AA_card.png": "/mbeaa/static/media/MBE_AA_card.3016f56e6952feec75a5.png",
     "static/media/MBE_AA_05_B.jpg": "/mbeaa/static/media/MBE_AA_05_B.855fe9c04d815794c43b.jpg",
@@ -32,10 +32,10 @@
     "static/media/Frutiger_Roman.ttf": "/mbeaa/static/media/Frutiger_Roman.f13468548dc6d4cb5025.ttf",
     "index.html": "/mbeaa/index.html",
     "main.04ba3534.css.map": "/mbeaa/static/css/main.04ba3534.css.map",
-    "main.b9a834ac.js.map": "/mbeaa/static/js/main.b9a834ac.js.map"
+    "main.57e69ff6.js.map": "/mbeaa/static/js/main.57e69ff6.js.map"
   },
   "entrypoints": [
     "static/css/main.04ba3534.css",
-    "static/js/main.b9a834ac.js"
+    "static/js/main.57e69ff6.js"
   ]
 }
