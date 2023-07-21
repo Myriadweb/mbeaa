@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {Routes, Route, Link, useLocation} from 'react-router-dom';
 import {Modal, Tooltip, OverlayTrigger, Button} from "react-bootstrap";
 import '../App.css';
@@ -6,14 +6,6 @@ import {CSSTransition} from "react-transition-group";
 import aaContent from '../assets/aa.json';
 
 function Home() {
-  const [ isActive, setIsActive ] = React.useState(false);
-  const [showImg1, setShowImg1] = React.useState(false);
-  const [showImg2, setShowImg2] = React.useState(false);
-  const portrait = require(`../assets/images/portraits/Portrait_Adelaide-Still.png`);
-  const image1 = require(`../assets/images/popups/MBE_AA_01_A.jpg`);
-  const caption1 = `Mary Baker Eddy, 1908`;
-  const image2 = require(`../assets/images/popups/MBE_AA_01_B.jpg`);
-  const caption2 = `Mary Baker Eddy, 1908`;
   const [chapterId, setChapterId] = React.useState(1);
 
   const updateChapterId = (id: number) => {
@@ -75,17 +67,12 @@ function Home() {
 }
 
 function ChapterContent({id}: { id: any }) {
-  const [currentId, setCurrentId] = React.useState(id);
   const [showImg1, setShowImg1] = React.useState(false);
   const [showImg2, setShowImg2] = React.useState(false);
   const [showKidsFacts, setShowKidsFacts] = React.useState(false);
-  const updateCurrentId = () => {
-    if (currentId !== id) {
-      setCurrentId(id);
-      setShowKidsFacts(false);
-    }
-  }
-  updateCurrentId();
+  useEffect(() => {
+    setShowKidsFacts(false)
+  }, [id]);
   return (
     <div className="Card">
       {aaContent.filter((item) => item.ID === id).map((item) => (
@@ -149,11 +136,6 @@ function ChapterContent({id}: { id: any }) {
       ))}
     </div>
   );
-}
-
-function ChapterNavigation() {
-  const contentLength = aaContent.length;
-  const [currentId, setCurrentId] = React.useState(1);
 }
 
 export default Home;

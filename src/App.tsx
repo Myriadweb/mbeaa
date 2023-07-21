@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Routes, Route, Link, useLocation} from 'react-router-dom';
 import { rootPath } from "./config";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,6 +8,9 @@ import Slideshow from "./components/Slideshow";
 import Home from './components/Home';
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 function App() {
+  useEffect(() => {
+    document.title = "All Aboard!";
+  })
   let location = useLocation();
   return (
     <div className="App">
