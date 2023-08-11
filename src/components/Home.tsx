@@ -1,21 +1,28 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
 import {Routes, Route, Link, useLocation} from 'react-router-dom';
 import {Modal, Tooltip, OverlayTrigger, Button} from "react-bootstrap";
 import '../App.css';
 import {CSSTransition} from "react-transition-group";
 import aaContent from '../assets/aa.json';
-
+import Track from "./Track";
 function Home() {
   const [chapterId, setChapterId] = React.useState(1);
-
+  const trackRef = React.useRef(null);
+  const trackPoints = [.05, .17, .33, .45, .65, .78];
   const updateChapterId = (id: number) => {
-    id > 0 && id < 7 && setChapterId(id);
+    if (id > 0 && id < 7) {
+      setChapterId(id);
+      // @ts-ignore
+      trackRef.current.AnimateRect(trackPoints[id - 1]);
+    }
   }
   // @ts-ignore
   let location = useLocation();
+
   return (
     <div className="Container">
       <div className="ChapterGuide">
+        <Track ref={trackRef} />
         <img className="TrainRoute" src={require(`../assets/images/train/MBE_AA_train-route.png`)} alt="Train Route" />
         <div className="ChapterList">
           <div className="ChapterItem">
