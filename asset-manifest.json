@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mbeaa/static/css/main.4111b67e.css",
-    "main.js": "/mbeaa/static/js/main.f68acedb.js",
+    "main.js": "/mbeaa/static/js/main.e366852d.js",
     "static/media/aa_intro.webm": "/mbeaa/static/media/aa_intro.8beb5d1eb37464ff23e9.webm",
     "static/media/MBE_popup-bkgd.png": "/mbeaa/static/media/MBE_popup-bkgd.803549eae193ec0abb19.png",
     "static/media/MBE_AA_card.png": "/mbeaa/static/media/MBE_AA_card.3016f56e6952feec75a5.png",
@@ -11,7 +11,7 @@
     "static/media/MBE_AA_06_A.jpg": "/mbeaa/static/media/MBE_AA_06_A.28b0039dc6e72c84ce5b.jpg",
     "static/media/MBE_AA_bkgd.jpg": "/mbeaa/static/media/MBE_AA_bkgd.bbe56f40eb97c8055b78.jpg",
     "static/media/MBE_AA_06_B.jpg": "/mbeaa/static/media/MBE_AA_06_B.ca0ffeb8c179771b76f9.jpg",
-    "static/media/MBE_AA_05_B.jpg": "/mbeaa/static/media/MBE_AA_05_B.0d318dfe7ad84f38b42f.jpg",
+    "static/media/MBE_AA_05_B.jpg": "/mbeaa/static/media/MBE_AA_05_B.8025053a935d42f0c7f3.jpg",
     "static/media/MBE_AA_01_B.jpg": "/mbeaa/static/media/MBE_AA_01_B.223117bc04c34bfc5d7c.jpg",
     "static/media/MBE_AA_04_B.jpg": "/mbeaa/static/media/MBE_AA_04_B.120c1194fcf053657206.jpg",
     "static/media/MBE_AA_05_A.jpg": "/mbeaa/static/media/MBE_AA_05_A.c43a39424f743a790ebc.jpg",
@@ -33,10 +33,10 @@
     "static/media/Frutiger_Roman.ttf": "/mbeaa/static/media/Frutiger_Roman.f13468548dc6d4cb5025.ttf",
     "index.html": "/mbeaa/index.html",
     "main.4111b67e.css.map": "/mbeaa/static/css/main.4111b67e.css.map",
-    "main.f68acedb.js.map": "/mbeaa/static/js/main.f68acedb.js.map"
+    "main.e366852d.js.map": "/mbeaa/static/js/main.e366852d.js.map"
   },
   "entrypoints": [
     "static/css/main.4111b67e.css",
-    "static/js/main.f68acedb.js"
+    "static/js/main.e366852d.js"
   ]
 }
