@@ -31,7 +31,7 @@ function Home() {
           </div>
           <div className="ChapterItem">
             <span className="ChapterLine" style={{width: 140 }}></span>
-            <Button variant="outline-secondary" active={chapterId === 2} onClick={() => updateChapterId(2)}>The 'Eddy Special'</Button>
+            <Button variant="outline-secondary" active={chapterId === 2} onClick={() => updateChapterId(2)}>The “Eddy Special”</Button>
           </div>
           <div className="ChapterItem">
             <span className="ChapterLine" style={{width: 158 }}></span>
@@ -47,14 +47,14 @@ function Home() {
           </div>
           <div className="ChapterItem">
             <span className="ChapterLine" style={{width: 134 }}></span>
-            <Button variant="outline-secondary" active={chapterId === 6} onClick={() => updateChapterId(6)}>Ablaze with Light</Button>
+            <Button variant="outline-secondary" active={chapterId === 6} onClick={() => updateChapterId(6)}>Ablaze With Light</Button>
           </div>
         </div>
       </div>
       <div className="ChapterContent">
         <div className="HomeHeader">
           <div className="Title">All Aboard!</div>
-          <div className="Intro">Scroll or use the chapter guide to explore Mary Baker Eddy's move from Concord, New Hampshire to Chestnut Hill, Massachusetts. Touch an image to expand and learn more.</div>
+          <div className="Intro">Scroll or use the chapter guide to explore Mary Baker Eddy’s move from Concord, <br />New Hampshire to Chestnut Hill, Massachusetts. Touch an image to expand and learn more.</div>
         </div>
         <div className="HomeContent">
           <ChapterContent id={chapterId} />
@@ -95,7 +95,7 @@ function ChapterContent({id}: { id: any }) {
                   <img src={require(`../assets/images/portraits/${item.PORTRAIT}`)} alt={item.ATTRIBUTION} />
                 </div>
                 <div className="Quote">
-                  <div className="QuoteContent">{item.QUOTE}</div>
+                  <div className="QuoteContent" dangerouslySetInnerHTML={{__html: item.QUOTE}}></div>
                   <div className="QuoteAuthor">&ndash; {item.ATTRIBUTION}</div>
                 </div>
               </div>
@@ -111,7 +111,7 @@ function ChapterContent({id}: { id: any }) {
             <Modal.Body>
               <img src={require(`../assets/images/popups/${item.IMAGE_1}`)} alt={item.CAPTION_1} />
               <div className="Caption" dangerouslySetInnerHTML={{__html: item.CAPTION_1}}></div>
-              <div className="Copyright">@ Private collection.</div>
+              <div className="Credit">{item.CREDIT_1}</div>
             </Modal.Body>
           </Modal>
           <Modal show={showImg2} onHide={() => setShowImg2(false)} size="xl">
@@ -120,12 +120,12 @@ function ChapterContent({id}: { id: any }) {
             <Modal.Body>
               <img src={require(`../assets/images/popups/${item.IMAGE_2}`)} alt={item.CAPTION_2} />
               <div className="Caption" dangerouslySetInnerHTML={{__html: item.CAPTION_2}}></div>
-              <div className="Copyright">@ Private collection.</div>
+              <div className="Credit">{item.CREDIT_2}</div>
             </Modal.Body>
           </Modal>
           {item.KIDS_FACTS && (
           <>
-            <div className="acorn active" onClick={() => setShowKidsFacts(true)}>
+            <div className={showKidsFacts ? "acorn active popup" : "acorn active"} onClick={() => setShowKidsFacts(true)}>
               <img src={require('../assets/images/MBE_acorn.png')} alt="acorn" />
             </div>
             <div className={showKidsFacts ? "acorn-popup active" : "acorn-popup"} onClick={() => setShowKidsFacts(false)}>
