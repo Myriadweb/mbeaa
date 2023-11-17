@@ -102,8 +102,8 @@ function ChapterContent({id}: { id: any }) {
             </div>
           </div>
           <div className="Popups">
-            <img src={require(`../assets/images/popups/${item.IMAGE_1}`)} alt={item.CAPTION_1} onClick={() => setShowImg1(true)} style={{marginBottom: 30}} />
-            <img src={require(`../assets/images/popups/${item.IMAGE_2}`)} alt={item.CAPTION_2} onClick={() => setShowImg2(true)} />
+            <img src={require(`../assets/images/popups/${item.IMAGE_1_THUMB}`)} alt={item.CAPTION_1} onClick={() => setShowImg1(true)} style={{marginBottom: 30}} />
+            <img src={require(`../assets/images/popups/${item.IMAGE_2_THUMB}`)} alt={item.CAPTION_2} onClick={() => setShowImg2(true)} />
           </div>
           <Modal show={showImg1} onHide={() => setShowImg1(false)} size="xl">
             <Modal.Header closeButton>
