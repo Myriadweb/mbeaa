@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mbeaa/static/css/main.f99481ae.css",
-    "main.js": "/mbeaa/static/js/main.9ecd1eb3.js",
+    "main.css": "/mbeaa/static/css/main.cbad715d.css",
+    "main.js": "/mbeaa/static/js/main.59a3a447.js",
     "static/media/aa_intro.webm": "/mbeaa/static/media/aa_intro.8beb5d1eb37464ff23e9.webm",
     "static/media/MBE_popup-bkgd.png": "/mbeaa/static/media/MBE_popup-bkgd.803549eae193ec0abb19.png",
     "static/media/MBE_AA_card.png": "/mbeaa/static/media/MBE_AA_card.3016f56e6952feec75a5.png",
@@ -18,6 +18,8 @@
     "static/media/MBE_AA_03_B.jpg": "/mbeaa/static/media/MBE_AA_03_B.0e2c67f144f97fe04bda.jpg",
     "static/media/MBE_AA_02_A.jpg": "/mbeaa/static/media/MBE_AA_02_A.0509e0664354498c8fe5.jpg",
     "static/media/MBE_AA_04_A.jpg": "/mbeaa/static/media/MBE_AA_04_A.69d3336830742546447b.jpg",
+    "static/media/MBE_AA_02_B_Thumb.jpg": "/mbeaa/static/media/MBE_AA_02_B_Thumb.ca2f6d8cccbf6ebdaff2.jpg",
+    "static/media/MBE_AA_02_A_Thumb.jpg": "/mbeaa/static/media/MBE_AA_02_A_Thumb.2944a96c621265caf4a1.jpg",
     "static/media/ClearfaceITCPro-Heavy.otf": "/mbeaa/static/media/ClearfaceITCPro-Heavy.cfd6e41e9a779d95320e.otf",
     "static/media/CenturyExp-RegIta.otf": "/mbeaa/static/media/CenturyExp-RegIta.0aaaec775e3c6cf0a6a1.otf",
     "static/media/CenturyExp-Reg.otf": "/mbeaa/static/media/CenturyExp-Reg.f957a512c9dfdbbdae8a.otf",
@@ -32,11 +34,11 @@
     "static/media/Frutiger_Condensed.ttf": "/mbeaa/static/media/Frutiger_Condensed.4cf8ef33ea7d9d5bd676.ttf",
     "static/media/Frutiger_Roman.ttf": "/mbeaa/static/media/Frutiger_Roman.f13468548dc6d4cb5025.ttf",
     "index.html": "/mbeaa/index.html",
-    "main.f99481ae.css.map": "/mbeaa/static/css/main.f99481ae.css.map",
-    "main.9ecd1eb3.js.map": "/mbeaa/static/js/main.9ecd1eb3.js.map"
+    "main.cbad715d.css.map": "/mbeaa/static/css/main.cbad715d.css.map",
+    "main.59a3a447.js.map": "/mbeaa/static/js/main.59a3a447.js.map"
   },
   "entrypoints": [
-    "static/css/main.f99481ae.css",
-    "static/js/main.9ecd1eb3.js"
+    "static/css/main.cbad715d.css",
+    "static/js/main.59a3a447.js"
   ]
 }
