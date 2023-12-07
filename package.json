@@ -1,7 +1,8 @@
 {
-  "name": "all-aboard2",
+  "name": "all-aboard",
   "version": "0.1.0",
   "private": true,
+  "main": "./electron.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -11,6 +12,8 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "bootstrap": "^5.3.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-squirrel-startup": "^1.0.0",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
@@ -22,14 +25,18 @@
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
-  "homepage": "https://Myriadweb.github.io/mbeaa/",
+  "homepage": "https://myriadweb.github.io/mbeaa",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "electron:start": "concurrently -k \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electronmon .\"",
+    "electron:package:mac": "yarn build && electron-builder -m -c.extraMetadata.main=electron.js",
+    "electron:package:win": "yarn build && electron-builder -w -c.extraMetadata.main=electron.js",
+    "electron:build": "npm run build && electron-builder build --publish never -wm"
   },
   "eslintConfig": {
     "extends": [
@@ -39,14 +46,45 @@
   },
   "browserslist": {
     "production": [
+      "last 1 electron version",
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
     "development": [
+      "last 1 electron version",
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "build": {
+    "appId": "Myriad.AllAboard",
+    "productName": "All Aboard",
+    "files": [
+      "./build/**/*",
+      "package.json",
+      "electron.js"
+    ],
+    "extends": null,
+    "directories": {
+      "buildResources": "public"
+    },
+    "mac": {
+      "category": "public.app-category.education",
+      "type": "development",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^27.1.2",
+    "electron-builder": "^24.9.1",
+    "electronmon": "^2.0.2",
+    "wait-on": "^7.2.0"
   }
 }
