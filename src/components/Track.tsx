@@ -10,10 +10,10 @@ const Track = forwardRef((props, ref) => {
   otherwise set end keypoint to new Y coordinate
   update rest of keypoints adding .02 to beginning and end keypoint
    */
-  const [keyPoints, setKeyPoints] = React.useState(['.01;.06']);
-  const [keyPoints2, setKeyPoints2] = React.useState(['.03;.085']);
-  const [keyPoints3, setKeyPoints3] = React.useState(['.05;.11']);
-  const [keyPoints4, setKeyPoints4] = React.useState(['.07;.135']);
+  const [keyPoints, setKeyPoints] = React.useState(['.005;.005']);
+  const [keyPoints2, setKeyPoints2] = React.useState(['.025;.025']);
+  const [keyPoints3, setKeyPoints3] = React.useState(['.05;.05']);
+  const [keyPoints4, setKeyPoints4] = React.useState(['.075;.075']);
   useImperativeHandle(ref, () => ({
     AnimateRect(num: number) {
       setKeyPoints([`${keyPoints[0].split(';')[1]};${num}`]);

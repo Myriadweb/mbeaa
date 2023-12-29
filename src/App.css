@@ -43,7 +43,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .App {
@@ -328,7 +327,7 @@ body {
 .CardPortrait {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   padding-left: 23px;
   position: absolute;
   bottom: 20px;
@@ -454,8 +453,10 @@ body {
   background-color: #30647e;
   border-radius: 50%;
   z-index: 1;
+  display: none;
 }
 .acorn.active {
+  display: block;
   background-color: #d59132;
   &:not(.popup) {
     animation: pulse 4s infinite;
@@ -478,6 +479,8 @@ body {
   padding: 40px;
   display: none;
   text-align: left;
+  align-items: center;
+  z-index: 2;
 }
 .acorn-popup.active {
   display: flex;
@@ -491,6 +494,18 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+.acorn-screen {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+}
+.acorn-screen.active {
+  display: block;
 }
 
 .tooltip {

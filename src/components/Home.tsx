@@ -8,7 +8,7 @@ import Track from "./Track";
 function Home() {
   const [chapterId, setChapterId] = React.useState(1);
   const trackRef = React.useRef(null);
-  const trackPoints = [.05, .17, .33, .45, .65, .78];
+  const trackPoints = [.005, .17, .33, .45, .65, .78];
   const updateChapterId = (id: number) => {
     if (id > 0 && id < 7) {
       setChapterId(id);
@@ -54,7 +54,7 @@ function Home() {
       <div className="ChapterContent">
         <div className="HomeHeader">
           <div className="Title">All Aboard!</div>
-          <div className="Intro">Scroll or use the chapter guide to explore Mary Baker Eddy’s move from Concord, <br />New Hampshire to Chestnut Hill, Massachusetts. Touch an image to expand and learn more.</div>
+          <div className="Intro">Scroll or use the chapter guide to explore Mary Baker Eddy’s move from Concord, <br />New Hampshire, to Chestnut Hill, Massachusetts. Touch an image to expand and learn more.</div>
         </div>
         <div className="HomeContent">
           <ChapterContent id={chapterId} />
@@ -127,6 +127,8 @@ function ChapterContent({id}: { id: any }) {
           <>
             <div className={showKidsFacts ? "acorn active popup" : "acorn active"} onClick={() => setShowKidsFacts(true)}>
               <img src={require('../assets/images/MBE_acorn.png')} alt="acorn" />
+            </div>
+            <div className={showKidsFacts ? "acorn-screen active" : "acorn-screen"} onClick={() => setShowKidsFacts(false)}>
             </div>
             <div className={showKidsFacts ? "acorn-popup active" : "acorn-popup"} onClick={() => setShowKidsFacts(false)}>
               <div className="close"></div>
