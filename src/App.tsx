@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {Routes, Route, Link, useLocation} from 'react-router-dom';
+import {Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import { rootPath } from "./config";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -8,13 +8,27 @@ import Slideshow from "./components/Slideshow";
 import Home from './components/Home';
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import ReactPlayer from "react-player";
+const TIME_TO_SPLASH = 60000;
 function App() {
   useEffect(() => {
     document.title = "All Aboard!";
   })
+  const timeoutRef = React.useRef(null);
+  const navigate = useNavigate();
   let location = useLocation();
+  const handleResetTimeout = () => {
+    if (timeoutRef.current) {
+      console.log(timeoutRef.current);
+      clearTimeout(timeoutRef.current);
+    }
+    // @ts-ignore
+    timeoutRef.current = setTimeout(() => {
+      navigate(rootPath);
+      console.log('timeout reset');
+    }, TIME_TO_SPLASH);
+  };
   return (
-    <div className="App">
+    <div className="App" onClick={() => handleResetTimeout()}>
       <TransitionGroup>
         <CSSTransition key={location.pathname} classNames="fade" timeout={300}>
           <Routes>
