@@ -8,7 +8,7 @@ import Slideshow from "./components/Slideshow";
 import Home from './components/Home';
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import ReactPlayer from "react-player";
-const TIME_TO_SPLASH = 60000;
+const TIME_TO_SPLASH = 120000;
 function App() {
   useEffect(() => {
     document.title = "All Aboard!";
