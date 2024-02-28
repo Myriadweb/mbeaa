@@ -28,7 +28,7 @@ const Track = forwardRef((props, ref) => {
   }));
 
   return (
-    <div className="Track">
+    <div className="Track" draggable="false">
       <svg viewBox="0 0 120 900" xmlns="http://www.w3.org/2000/svg" style={{height: '100%' }}>
         <path
           fill="none"

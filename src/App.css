@@ -359,6 +359,7 @@ body {
   height: 262px;
   border: 1px solid #2a1c14;
   object-fit: cover;
+  cursor: pointer;
 }
 .Popups img:last-child {
   margin-right: 0;
@@ -458,6 +459,7 @@ body {
 .acorn.active {
   display: block;
   background-color: #d59132;
+  cursor: pointer;
   &:not(.popup) {
     animation: pulse 4s infinite;
   }
@@ -480,7 +482,6 @@ body {
   display: none;
   text-align: left;
   align-items: center;
-  z-index: 2;
 }
 .acorn-popup.active {
   display: flex;

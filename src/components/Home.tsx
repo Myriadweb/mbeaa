@@ -23,7 +23,7 @@ function Home() {
     <div className="Container">
       <div className="ChapterGuide">
         <Track ref={trackRef} />
-        <img className="TrainRoute" src={require(`../assets/images/train/MBE_AA_train-route.png`)} alt="Train Route" />
+        <img className="TrainRoute" src={require(`../assets/images/train/MBE_AA_train-route.png`)} alt="Train Route" draggable="false" />
         <div className="ChapterList">
           <div className="ChapterItem">
             <span className="ChapterLine"></span>
@@ -63,10 +63,10 @@ function Home() {
       <div className="ChapterNavigation">
 
         <Link to="#" onClick={() => updateChapterId(chapterId - 1)} className="PrevLink" style={chapterId === 1 ? {opacity: .5} : {opacity: 1}}>
-          <img src={require(`../assets/images/MBE_AA_arrow.png`)} alt="Prev" />
+          <img src={require(`../assets/images/MBE_AA_arrow.png`)} alt="Prev" draggable="false" />
         </Link>
         <Link to="#" onClick={() => updateChapterId(chapterId + 1)} className="NextLink" style={chapterId === 6 ? {opacity: .5} : {opacity: 1}}>
-          <img src={require(`../assets/images/MBE_AA_arrow.png`)} alt="Next" />
+          <img src={require(`../assets/images/MBE_AA_arrow.png`)} alt="Next" draggable="false" />
         </Link>
       </div>
     </div>
@@ -92,7 +92,7 @@ function ChapterContent({id}: { id: any }) {
               <div className="CardText" dangerouslySetInnerHTML={{__html: item.MAIN_TEXT}}></div>
               <div className="CardPortrait">
                 <div className="Portrait">
-                  <img src={require(`../assets/images/portraits/${item.PORTRAIT}`)} alt={item.ATTRIBUTION} />
+                  <img src={require(`../assets/images/portraits/${item.PORTRAIT}`)} alt={item.ATTRIBUTION} draggable="false" />
                 </div>
                 <div className="Quote">
                   <div className="QuoteContent" dangerouslySetInnerHTML={{__html: item.QUOTE}}></div>
@@ -102,14 +102,14 @@ function ChapterContent({id}: { id: any }) {
             </div>
           </div>
           <div className="Popups">
-            <img src={require(`../assets/images/popups/${item.IMAGE_1_THUMB}`)} alt={item.CAPTION_1} onClick={() => setShowImg1(true)} style={{marginBottom: 30}} />
-            <img src={require(`../assets/images/popups/${item.IMAGE_2_THUMB}`)} alt={item.CAPTION_2} onClick={() => setShowImg2(true)} />
+            <img src={require(`../assets/images/popups/${item.IMAGE_1_THUMB}`)} alt={item.CAPTION_1} onClick={() => setShowImg1(true)} style={{marginBottom: 30}} draggable="false" />
+            <img src={require(`../assets/images/popups/${item.IMAGE_2_THUMB}`)} alt={item.CAPTION_2} onClick={() => setShowImg2(true)} draggable="false" />
           </div>
           <Modal show={showImg1} onHide={() => setShowImg1(false)} size="xl">
             <Modal.Header closeButton>
             </Modal.Header>
             <Modal.Body>
-              <img src={require(`../assets/images/popups/${item.IMAGE_1}`)} alt={item.CAPTION_1} />
+              <img src={require(`../assets/images/popups/${item.IMAGE_1}`)} alt={item.CAPTION_1} draggable="false" />
               <div className="Caption" dangerouslySetInnerHTML={{__html: item.CAPTION_1}}></div>
               <div className="Credit">{item.CREDIT_1}</div>
             </Modal.Body>
@@ -118,7 +118,7 @@ function ChapterContent({id}: { id: any }) {
             <Modal.Header closeButton>
             </Modal.Header>
             <Modal.Body>
-              <img src={require(`../assets/images/popups/${item.IMAGE_2}`)} alt={item.CAPTION_2} />
+              <img src={require(`../assets/images/popups/${item.IMAGE_2}`)} alt={item.CAPTION_2} draggable="false" />
               <div className="Caption" dangerouslySetInnerHTML={{__html: item.CAPTION_2}}></div>
               <div className="Credit">{item.CREDIT_2}</div>
             </Modal.Body>
@@ -130,15 +130,16 @@ function ChapterContent({id}: { id: any }) {
             </div>
             <div className={showKidsFacts ? "acorn-screen active" : "acorn-screen"} onClick={() => setShowKidsFacts(false)}>
             </div>
-            <div className={showKidsFacts ? "acorn-popup active" : "acorn-popup"} onClick={() => setShowKidsFacts(false)}>
+            <div className={showKidsFacts ? "acorn-popup active" : "acorn-popup"}
+                 onClick={() => setShowKidsFacts(false)}>
               <div className="close"></div>
-              {item.KIDS_FACTS}
+              <div dangerouslySetInnerHTML={{__html: item.KIDS_FACTS}}></div>
             </div>
           </>
           )}
           {!item.KIDS_FACTS && (
-            <div className="acorn">
-              <img src={require('../assets/images/MBE_acorn.png')} alt="acorn" />
+              <div className="acorn">
+              <img src={require('../assets/images/MBE_acorn.png')} alt="acorn" draggable="false" />
             </div>
           )}
         </div>

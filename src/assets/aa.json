@@ -31,7 +31,7 @@
     "IMAGE_2_THUMB": "MBE_AA_02_B_Thumb.jpg",
     "CAPTION_2": "This postcard, circa 1906, shows the station where Mrs. Eddy boarded a private train—dubbed by a newspaper the “Eddy Special”—for her move in January 1908.",
     "CREDIT_2": "",
-    "KIDS_FACTS": "Growing up on a farm, Mrs. Eddy rode horses. Later, she enjoyed horse-drawn carriage rides every day. She loved her horses and requested that people speak to them when entering the stable."
+    "KIDS_FACTS": "Growing up on a farm, <br />Mrs. Eddy rode horses. Later, she enjoyed horse-drawn carriage rides every day. She loved her horses and requested that people speak to them when entering the stable."
   },
   {
     "ID": 3,
@@ -76,7 +76,7 @@
     "PORTRAIT": "Portrait_Calvin-Hill.png",
     "IMAGE_2": "MBE_AA_05_A.jpg",
     "IMAGE_2_THUMB": "MBE_AA_05_A.jpg",
-    "CAPTION_2": "Groundskeeper and handyman John Salchow, whom Mrs. Eddy called “faithful John,” photographed by cook Minnie Weygandt at Pleasant View.",
+    "CAPTION_2": "Groundskeeper and handyman John Salchow, whom Mrs. Eddy called <br />“faithful John,” photographed by cook Minnie Weygandt at Pleasant View.",
     "CREDIT_2": "",
     "IMAGE_1": "MBE_AA_05_B.jpg",
     "IMAGE_1_THUMB": "MBE_AA_05_B.jpg",
